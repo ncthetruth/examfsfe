@@ -16,11 +16,17 @@ const formatDate = (date: Date): string => {
   return date.toLocaleDateString(undefined, options);
 };
 
-const DayButtons: React.FC = () => {
+interface DayButtonsProps {
+  onDateChange: (date: Date) => void;
+}
+
+const DayButtons: React.FC<DayButtonsProps> = ({ onDateChange }) => {
   const days = getNextFiveDays();
   const [selectedDay, setSelectedDay] = useState<Date>(days[0]);
+
   const handleButtonClick = (day: Date) => {
     setSelectedDay(day);
+    onDateChange(day);
   };
 
   return (

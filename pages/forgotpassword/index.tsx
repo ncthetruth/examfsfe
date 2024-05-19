@@ -83,26 +83,13 @@ const LoginPage = () => {
                 className="w-full px-3 py-2 mt-1 border rounded-md focus:outline-none focus:ring focus:ring-red-300 focus:border-red-500"
               />
             </div>
-            <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                Password
-              </label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                className="w-full px-3 py-2 mt-1 border rounded-md focus:outline-none focus:ring focus:ring-red-300 focus:border-red-500"
-              />
-            </div>
+            
             
             <button
               type="submit"
               className="w-full px-4 py-2 text-red-500 bg-white rounded-md border border-red-500 hover:bg-red-500 hover:text-white focus:outline-none focus:ring focus:ring-red-500"
             >
-              Login
+              Submit
             </button>
           </form>
           <p className="text-sm text-center text-gray-600">
@@ -112,17 +99,7 @@ const LoginPage = () => {
             </Link>
           </p>
           <div className="flex items-center justify-center">
-            <Link href="/forgotpassword" legacyBehavior>
-              <a className="text-sm text-red-500 hover:underline">Forgot password</a>
-            </Link>
           </div>
-          <hr className="my-6 border-gray-300" />
-          <button
-            onClick={handleOidcSignIn}
-            className="flex items-center justify-center w-full px-4 py-2 text-white bg-red-500 rounded-md hover:bg-white hover:text-red-600 hover:border-red-500"
-          >
-            Google Account
-          </button>
         </div>
       </div>
       <Footer />

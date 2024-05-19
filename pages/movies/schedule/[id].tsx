@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Navbar from '@/components/NavBar';
 import MovieDetail from '@/components/MovieDetail';
-import DayButtons from '@/components/DayButtons';
 import MovieDate from '@/components/MovieDate';
 import moviesData, { Movie } from '@/functions/moviesData';
 import LoadingSpinner from '@/components/LoadingSpinner';
@@ -50,8 +49,9 @@ const ScheduleDetails: React.FC = () => {
       {scheduleData.movies.map((movie: Movie, index: number) => (
         <MovieDetail key={index} movie={movie} />
       ))}
-      <DayButtons />
-      <MovieDate />
+      {scheduleData.movies.map((movie: Movie, index: number) => (
+        <MovieDate key={index} movieId={movie.id} />
+      ))}
     </div>
   );
 };

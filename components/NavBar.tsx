@@ -72,6 +72,9 @@ const Navbar: React.FC = () => {
                     <li>
                       <button onClick={handleLogout} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 mx-auto">Sign out</button>
                     </li>
+                    <li>
+              <Link href="/history" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 mx-auto text-center">History</Link>
+            </li>
                   </ul>
                 </div>
               )}
@@ -87,10 +90,7 @@ const Navbar: React.FC = () => {
               <Link href="/movies" className="block py-2 px-3 text-red-500 text-xl">Movies</Link>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-red-500 text-xl">Cinemas</a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 px-3 text-red-500 text-xl">Features</a>
+              <Link href="/promotion" className="block py-2 px-3 text-red-500 text-xl">Promotions</Link>
             </li>
           </ul>
         </div>
